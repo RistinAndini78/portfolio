@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -16,7 +17,7 @@
       body {
         font-family: "Poppins", sans-serif;
       }
-      /* Modal styling */
+
       .modal {
         display: none;
         position: fixed;
@@ -28,20 +29,24 @@
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.7);
       }
+
       .modal-content {
         background-color: #fefefe;
-        margin: 15% auto;
+        margin: 5% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%;
+        width: 90%;
         max-width: 900px;
+        border-radius: 1rem;
       }
+
       .close {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
       }
+
       .close:hover,
       .close:focus {
         color: black;
@@ -50,33 +55,32 @@
       }
     </style>
   </head>
-  <body class="bg-white text-black">
-    <!-- Header -->
-    <header
-      class="flex justify-between items-center p-6 sticky top-0 bg-[#0a192f] z-50"
+  <body class="bg-[#0a192f] text-white">
+    <!-- Header Tengah -->
+    <nav
+      class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex space-x-4"
     >
-      <div class="text-2xl font-bold text-white">Aldi Mazmudin</div>
-      <nav>
-        <ul class="flex space-x-6">
-          <li>
-            <a class="text-white hover:text-blue-400" href="index.html">Home</a>
-          </li>
-          <li>
-            <a class="text-white hover:text-blue-400" href="tugas.html"
-              >Tugas</a
-            >
-          </li>
-          <li>
-            <a class="text-white hover:text-blue-400" href="hobi.html">Hobi</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <a
+        class="bg-[#516e8f] text-white px-5 py-2 rounded-full transition transform hover:bg-white hover:text-[#333] hover:scale-105"
+        href="index.html"
+        >Home</a
+      >
+      <a
+        class="bg-[#516e8f] text-white px-5 py-2 rounded-full transition transform hover:bg-white hover:text-[#333] hover:scale-105"
+        href="tugas.html"
+        >Tugas</a
+      >
+      <a
+        class="bg-[#516e8f] text-white px-5 py-2 rounded-full transition transform hover:bg-white hover:text-[#333] hover:scale-105"
+        href="hobi.html"
+        >Hobi</a
+      >
+    </nav>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-12">
+    <section id="projects" class="py-20">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-8 text-black">Tugas</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 text-white">Tugas</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Project 1 -->
           <div
@@ -84,7 +88,7 @@
             onclick="openModal('modal1')"
           >
             <img
-              src="images/tm12.jpg"
+              src="images/t1.jpg"
               alt="Project 1 Image"
               class="w-full h-64 object-cover rounded-lg"
             />
@@ -96,7 +100,7 @@
             onclick="openModal('modal2')"
           >
             <img
-              src="images/tm11.jpg"
+              src="images/t2.jpg"
               alt="Project 2 Image"
               class="w-full h-64 object-cover rounded-lg"
             />
@@ -108,7 +112,7 @@
             onclick="openModal('modal3')"
           >
             <img
-              src="images/tm13.jpg"
+              src="images/t3.jpg"
               alt="Project 3 Image"
               class="w-full h-64 object-cover rounded-lg"
             />
@@ -121,8 +125,8 @@
     <div id="modal1" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Tugas 1</h2>
-        <p>CREDIT MACET</p>
+        <h2 class="text-black">Tugas 1</h2>
+        <p class="text-black">CREDIT MACET</p>
         <img src="images/flowmap1.png" alt="Project 1 Image" class="mb-4" />
         <img src="images/flowmap2.png" alt="Project 1 Image" class="mb-4" />
         <img src="images/tugas1.jpg" alt="Project 1 Image" class="mb-4" />
@@ -131,8 +135,8 @@
         <div class="text-center mt-4">
           <a
             href="tugas.html"
-            class="bg-blue-400 text-white px-6 py-2 rounded-lg"
-            >Kembali ke Halaman Tugas</a
+            class="bg-[#516e8f] text-white px-6 py-2 rounded-full hover:bg-white hover:text-[#333] transition"
+            >Kembali</a
           >
         </div>
       </div>
@@ -142,52 +146,391 @@
     <div id="modal2" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h2>Tugas 2</h2>
-        <p>
-          PEMELIHARAAN MESIN ATM DAN CASH REPLENISHMENT MESIN ATM MENGGUNAKAN
-          METODE WATERFALL
-        </p>
-        <img src="images/hal1.jpg" alt="Project 2 Image" class="mb-4" />
-        <img src="images/hal2.jpg" alt="Project 2 Image" class="mb-4" />
-        <img src="images/hal3.jpg" alt="Project 2 Image" class="mb-4" />
-        <img src="images/hal4.jpg" alt="Project 2 Image" class="mb-4" />
-        <img src="images/hal5.jpg" alt="Project 2 Image" class="mb-4" />
-        <div class="text-center mt-4">
-          <a
-            href="tugas.html"
-            class="bg-blue-400 text-white px-6 py-2 rounded-lg"
-            >Kembali ke Halaman Tugas</a
-          >
-        </div>
+        <h2 class="text-black">Tugas 2</h2>
+        <img src="images/hal1.jpg" alt="Project 2 image" class="mb-4" />
+        <img src="images/hal2.jpg" alt="Project 2 image" class="mb-4" />
+        <img src="images/hal3.jpg" alt="Project 2 image" class="mb-4" />
+        <img src="images/hal4.jpg" alt="Project 2 image" class="mb-4" />
+        <img src="images/hal5.jpg" alt="Project 2 image" class="mb-4" />
       </div>
     </div>
 
     <!-- Modal 3 -->
+    <!-- Modal 3 -->
+    <!-- Modal 3 -->
     <div id="modal3" class="modal">
-      <div class="modal-content">
+      <div class="modal-content bg-white text-black">
         <span class="close" onclick="closeModal('modal3')">&times;</span>
-        <h2>Project 3</h2>
-        <p>Details about Project 3 go here.</p>
-        <img src="images/project3.jpg" alt="Project 3 Image" class="mb-4" />
-        <div class="text-center mt-4">
+        <h2 class="text-2xl font-bold text-center mb-6 text-blue-900">
+          Tugas 3
+        </h2>
+
+        <h3 class="text-lg mb-4">Berdasarkan Data</h3>
+
+        <!-- Tabel Perhitungan -->
+        <div class="overflow-x-auto w-full mb-8">
+          <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+              <tr class="bg-gray-200 text-gray-700">
+                <th class="py-2 px-4 border-b">No</th>
+                <th class="py-2 px-4 border-b">Data</th>
+                <th class="py-2 px-4 border-b">Perhitungan</th>
+                <th class="py-2 px-4 border-b">Hasil</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td class="py-2 px-4 border-b">1</td>
+                <td class="py-2 px-4 border-b">Tanggal Lahir</td>
+                <td class="py-2 px-4 border-b">8 × 10</td>
+                <td class="py-2 px-4 border-b">80</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="py-2 px-4 border-b">2</td>
+                <td class="py-2 px-4 border-b">Bulan Lahir</td>
+                <td class="py-2 px-4 border-b">6 × 100</td>
+                <td class="py-2 px-4 border-b">600</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b">3</td>
+                <td class="py-2 px-4 border-b">Tahun Lahir</td>
+                <td class="py-2 px-4 border-b">2004</td>
+                <td class="py-2 px-4 border-b">2004</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="py-2 px-4 border-b">4</td>
+                <td class="py-2 px-4 border-b">NIM (3 digit terakhir)</td>
+                <td class="py-2 px-4 border-b">095 → 95</td>
+                <td class="py-2 px-4 border-b">95</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Daftar Track -->
+        <div class="bg-white p-4 rounded shadow mb-6">
+          <p class="text-lg mb-2">
+            Urutan track yang akan digunakan di dalam analisis algoritma:
+          </p>
+          <p class="text-red-700 font-bold text-xl">
+            1600, 1050, 1775, 1950, 80, 825, 75, 1300, 1450, 600, 600, 1600,
+            1600, 1050, 30, 1900, 2004, 700, 1300, 55, 425, 95, 700, 1600, 200
+          </p>
+        </div>
+
+        <!-- Hasil Perhitungan Algoritma -->
+        <div class="bg-white p-6 rounded-lg shadow space-y-6">
+          <h2 class="text-xl font-bold text-center text-blue-900 mb-4">
+            Perhitungan Total Pergerakan Head
+          </h2>
+
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-semibold text-lg">
+                1. FCFS (First-Come, First-Served)
+              </h3>
+              <p>
+                Urutan: 1234 ➔ 1600 ➔ 1050 ➔ 1775 ➔ 1950 ➔ 80 ➔ 825 ➔ 75 ➔ 1300 ➔ 1450 ➔ 600 ➔ 600 ➔ 1600 ➔ 1050 ➔ 30 ➔ 1900 ➔ 2004 ➔ 700 ➔ 1300 ➔ 55 ➔ 425 ➔ 95 ➔ 700 ➔ 1600 ➔ 200
+
+              </p>
+              <p class="font-bold">Total pergerakan: 22.584 track</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-lg">
+                2. SSTF (Shortest Seek Time First)
+              </h3>
+              <p>
+                Urutan:1234 ➔ 1300 ➔ 1300 ➔ 1450 ➔ 1600 ➔ 1600 ➔ 1600 ➔ 1775 ➔ 1900 ➔ 1950 ➔ 2004 ➔ 1050 ➔ 1050 ➔ 825 ➔ 700 ➔ 700 ➔ 600 ➔ 600 ➔ 425 ➔ 200 ➔ 95 ➔ 80 ➔ 75 ➔ 55 ➔ 30
+
+              </p>
+              <p class="font-bold">Total pergerakan: 2.749 track</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-lg">
+                3. SCAN (Elevator Algorithm)
+              </h3>
+              <p>
+                Urutan: 1234 ➔ 1300 ➔ 1450 ➔ 1600 ➔ 1600 ➔ 1600 ➔ 1775 ➔ 1900 ➔ 1950 ➔ 2004 ➔ 2000 ➔ 1050 ➔ 1050 ➔ 825 ➔ 700 ➔ 700 ➔ 600 ➔ 600 ➔ 425 ➔ 200 ➔ 95 ➔ 80 ➔ 75 ➔ 55 ➔ 30
+
+              </p>
+              <p class="font-bold">Total pergerakan: 2.745 track</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-lg">4. LOOK</h3>
+              <p>
+                Urutan:1234 ➔ 1300 ➔ 1450 ➔ 1600 ➔ 1600 ➔ 1600 ➔ 1775 ➔ 1900 ➔ 1950 ➔ 2004 ➔ 1050 ➔ 1050 ➔ 825 ➔ 700 ➔ 700 ➔ 600 ➔ 600 ➔ 425 ➔ 200 ➔ 95 ➔ 80 ➔ 75 ➔ 55 ➔ 30
+
+              </p>
+              <p class="font-bold">Total pergerakan: 2.745 track</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-lg">5. C-SCAN (Circular SCAN)</h3>
+              <p>
+                Urutan: 1234 ➔ 1300 ➔ 1450 ➔ 1600 ➔ 1600 ➔ 1600 ➔ 1775 ➔ 1900 ➔ 1950 ➔ 2004 ➔ 2000 ➔ (kembali ke 0) ➔ 30 ➔ 55 ➔ 75 ➔ 80 ➔ 95 ➔ 200 ➔ 425 ➔ 600 ➔ 600 ➔ 700 ➔ 700 ➔ 825 ➔ 1050 ➔ 1050
+
+              </p>
+              <p class="font-bold">Total pergerakan: 4.549 track</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-lg">6. C-LOOK (Circular LOOK)</h3>
+              <p>
+                Urutan:1234 ➔ 1300 ➔ 1450 ➔ 1600 ➔ 1600 ➔ 1600 ➔ 1775 ➔ 1900 ➔ 1950 ➔ 2004 ➔ (kembali ke 30) ➔ 55 ➔ 75 ➔ 80 ➔ 95 ➔ 200 ➔ 425 ➔ 600 ➔ 600 ➔ 700 ➔ 700 ➔ 825 ➔ 1050 ➔ 1050
+
+              </p>
+              <p class="font-bold">Total pergerakan: 4.589 track</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-lg">6. PTPD (Preferred Track With Partial Disk)</h3>
+              <p>
+                Urutan:1234 ➔ 1300 ➔ 1300 ➔ 1450 ➔ 1600 ➔ 1600 ➔ 1600 ➔ 1775 ➔ 1900 ➔ 1950 ➔ 2004 ➔ 1050 ➔ 1050 ➔ 825 ➔ 700 ➔ 700 ➔ 600 ➔ 600 ➔ 425 ➔ 200 ➔ 95 ➔ 80 ➔ 75 ➔ 55 ➔ 30
+
+              </p>
+              <p class="font-bold">Total pergerakan: 2.749 track</p>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      padding: 20px;
+      text-align: center;
+    }
+    .btn-group {
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #d1d5db;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #9ca3af;
+    }
+    .btn.active {
+      background-color: #2563eb;
+      color: white;
+    }
+    canvas {
+      background-color: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="text-2xl mb-4 text-blue-900 font-bold">Grafik Algoritma Disk Scheduling</h2>
+
+  <div class="btn-group">
+    <button class="btn active" onclick="toggleDataset(0)">FCFS</button>
+    <button class="btn" onclick="toggleDataset(1)">SSTF</button>
+    <button class="btn" onclick="toggleDataset(2)">SCAN</button>
+    <button class="btn" onclick="toggleDataset(3)">C-SCAN</button>
+    <button class="btn" onclick="toggleDataset(4)">LOOK</button>
+    <button class="btn" onclick="toggleDataset(5)">C-LOOK</button>
+    <button class="btn" onclick="toggleDataset(6)">PTPD</button>
+  </div>
+  
+  <canvas id="myChart" width="1200" height="600"></canvas>
+  
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+  
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: Array.from({ length: 26 }, (_, i) => i + 1), // langkah 1-26
+        datasets: [
+          {
+            label: 'FCFS (22.584)',
+            data: [1234, 1600, 1050, 1775, 1950, 80, 825, 75, 1300, 1450, 600, 600, 1600, 1050, 30, 1900, 2004, 700, 1300, 55, 425, 95, 700, 1600, 200],
+            borderColor: '#ef4444', // merah terang
+            backgroundColor: '#f87171',
+            tension: 0.4,
+            hidden: false
+          },
+          {
+            label: 'SSTF (2.749)',
+            data: [1234, 1300, 1300, 1450, 1600, 1600, 1600, 1775, 1900, 1950, 2004, 1050, 1050, 825, 700, 700, 600, 600, 425, 200, 95, 80, 75, 55, 30],
+            borderColor: '#22c55e', // hijau muda
+            backgroundColor: '#86efac',
+            tension: 0.4,
+            hidden: true
+          },
+          {
+            label: 'SCAN (2.745)',
+            data: [1234, 1300, 1450, 1600, 1600, 1600, 1775, 1900, 1950, 2004, 2000, 1050, 1050, 825, 700, 700, 600, 600, 425, 200, 95, 80, 75, 55, 30],
+            borderColor: '#3b82f6', // biru terang
+            backgroundColor: '#93c5fd',
+            tension: 0.4,
+            hidden: true
+          },
+          {
+            label: 'C-SCAN (4.549)',
+            data: [1234, 1300, 1450, 1600, 1600, 1600, 1775, 1900, 1950, 2004, 2000, 0, 30, 55, 75, 80, 95, 200, 425, 600, 600, 700, 700, 825, 1050, 1050],
+            borderColor: '#facc15', // kuning cerah
+            backgroundColor: '#fde047',
+            tension: 0.4,
+            hidden: true
+          },
+          {
+            label: 'LOOK (2.745)',
+            data: [1234, 1300, 1450, 1600, 1600, 1600, 1775, 1900, 1950, 2004, 1050, 1050, 825, 700, 700, 600, 600, 425, 200, 95, 80, 75, 55, 30],
+            borderColor: '#a855f7', // ungu cerah
+            backgroundColor: '#d8b4fe',
+            tension: 0.4,
+            hidden: true
+          },
+          {
+            label: 'C-LOOK (4.589)',
+            data: [1234, 1300, 1450, 1600, 1600, 1600, 1775, 1900, 1950, 2004, 30, 55, 75, 80, 95, 200, 425, 600, 600, 700, 700, 825, 1050, 1050],
+            borderColor: '#f97316', // oranye terang
+            backgroundColor: '#fdba74',
+            tension: 0.4,
+            hidden: true
+          },
+          {
+            label: 'PTPD (2.749)',
+            data: [1234, 1300, 1300, 1450, 1600, 1600, 1600, 1775, 1900, 1950, 2004, 1050, 1050, 825, 700, 700, 600, 600, 425, 200, 95, 80, 75, 55, 30],
+            borderColor: '#14b8a6', // hijau tosca
+            backgroundColor: '#5eead4',
+            tension: 0.4,
+            hidden: true
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#111827',
+              font: {
+                size: 14
+              }
+            }
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#1f2937'
+            }
+          },
+          y: {
+            ticks: {
+              color: '#1f2937'
+            }
+          }
+        }
+      }
+    });
+  
+    function toggleDataset(index) {
+      chart.data.datasets.forEach((dataset, i) => {
+        dataset.hidden = i !== index;
+      });
+      chart.update();
+  
+      document.querySelectorAll('.btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
+<h2 class="text-2xl mb-6 text-blue-900 font-bold">Kesimpulan Algoritma Disk Scheduling</h2>
+<div class="bg-white p-6 rounded-lg shadow space-y-6">
+  <div>
+    <h3 class="font-semibold text-lg text-blue-900">1. FCFS (First-Come, First-Served)</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">22.584 track</span>.
+      Algoritma FCFS mengunjungi semua track sesuai dengan urutan kedatangan, yang menyebabkan pergerakan head yang cukup besar.
+    </p>
+  </div>
+  <div>
+    <h3 class="font-semibold text-lg text-green-600">2. SSTF (Shortest Seek Time First)</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">2.749 track</span>.
+      SSTF lebih efisien dalam hal pergerakan head karena memilih track yang paling dekat dengan posisi head saat ini, menghasilkan pergerakan yang lebih sedikit dibandingkan FCFS.
+    </p>
+  </div>
+  <div>
+    <h3 class="font-semibold text-lg text-blue-700">3. SCAN (Elevator Algorithm)</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">2.745 track</span>.
+      Algoritma SCAN bergerak ke arah tertentu sampai batas maksimal, lalu berbalik arah, menghasilkan pergerakan yang lebih sedikit daripada FCFS namun lebih besar dari SSTF.
+    </p>
+  </div>
+  <div>
+    <h3 class="font-semibold text-lg text-purple-600">4. LOOK</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">2.745 track</span>.
+      LOOK serupa dengan SCAN, tetapi pergerakan head dihentikan pada track yang ada, menghasilkan pergerakan lebih efisien dibandingkan SCAN.
+    </p>
+  </div>
+  <div>
+    <h3 class="font-semibold text-lg text-yellow-600">5. C-SCAN (Circular SCAN)</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">4.549 track</span>.
+      C-SCAN memperkenalkan pendekatan sirkular, yang dapat meningkatkan efisiensi dibandingkan SCAN, meskipun pergerakannya sedikit lebih tinggi.
+    </p>
+  </div>
+  <div>
+    <h3 class="font-semibold text-lg text-orange-600">6. C-LOOK (Circular LOOK)</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">4.589 track</span>.
+      C-LOOK memiliki kemiripan dengan C-SCAN namun hanya bergerak menuju track yang lebih dekat, sedikit lebih efisien daripada C-SCAN.
+    </p>
+  </div>
+  <div>
+    <h3 class="font-semibold text-lg text-red-600">7. PTPD (Preferred Track With Partial Disk)</h3>
+    <p>
+      Total pergerakan head: <span class="font-bold">2.749 track</span>.
+      PTPD memilih track berdasarkan preferensi pengguna dan disk partial, yang memberikan hasil yang mirip dengan SSTF.
+    </p>
+  </div>
+</div>
+
+
+  
+
+        <!-- Tombol Kembali -->
+        <div class="text-center mt-6">
           <a
             href="tugas.html"
-            class="bg-blue-400 text-white px-6 py-2 rounded-lg"
-            >Kembali ke Halaman Tugas</a
+            class="bg-[#516e8f] text-white px-6 py-2 rounded-full hover:bg-white hover:text-[#333] transition"
+            >Kembali</a
           >
         </div>
       </div>
     </div>
 
     <script>
-      // Fungsi untuk membuka modal berdasarkan id
-      function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
+      function openModal(id) {
+        document.getElementById(id).style.display = "block";
       }
 
-      // Fungsi untuk menutup modal berdasarkan id
-      function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
+      function closeModal(id) {
+        document.getElementById(id).style.display = "none";
       }
     </script>
   </body>
